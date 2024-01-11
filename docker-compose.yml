@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  db:
+    image: mysql
+    container_name: db
+    command: --init-file /data/application/init.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: plainventory
+      MYSQL_USER: ice
+      MYSQL_PASSWORD: ice
+    ports:
+      - "6033:3306"
+    volumes:
+      - ./init.sql:/data/application/init.sql
+      - dbdata:/var/lib/mysql
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+volumes:
+  dbdata:
