@@ -26,4 +26,4 @@ if ($row=mysqli_fetch_array($result)) {
     }
     header("Location: ../index.php");
 }
-die('<script>alert("Failed to login.");location.href="../login.php";</script>');
+die('<script>alert("Failed to login.");location.href="../index.php";</script>');
