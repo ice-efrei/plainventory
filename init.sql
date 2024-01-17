@@ -1,19 +1,16 @@
 # CREATE USER 'ice'@'localhost' IDENTIFIED BY 'ice';
 # GRANT CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT, REFERENCES, RELOAD on *.* TO 'ice'@'localhost' WITH GRANT OPTION;
 # # RENAME USER 'ice'@'localhost' TO 'ice'@'172.22.0.2';
-# CREATE DATABASE plainventory if not exists;
+create database if not exists plainventory;
 use plainventory;
-CREATE TABLE Associations (
-    associationid int NOT NULL AUTO_INCREMENT,
-    name varchar(255) NOT NULL,
-    PRIMARY KEY (associationid)
-);
 CREATE TABLE Spools (
     spoolid int NOT NULL AUTO_INCREMENT,
     material varchar(255) NOT NULL,
     color varchar(255) NOT NULL,
-    owner int NOT NULL,
-    qt int,
+    owner varchar(255) NOT NULL,
+    weight int,
+    printer varchar(255),
+    brand varchar(255),
     PRIMARY KEY (spoolid)
 );
 CREATE TABLE users (
@@ -22,7 +19,7 @@ CREATE TABLE users (
     password varchar(255) DEFAULT NULL,
     email varchar(255) DEFAULT NULL,
     role varchar(255) DEFAULT NULL,
-    association int DEFAULT NULL,
+    association varchar(255) DEFAULT NULL,
     lastlogin date DEFAULT NULL,
     PRIMARY KEY (id)
 );

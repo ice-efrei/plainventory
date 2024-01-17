@@ -215,7 +215,7 @@ if(isset($_SESSION['user_id'])){ ?>
                 </a>
             </div>
         </div>
-        <form class="m-3 md:w-2/3 lg:w-1/3" action="sources/update.php?id=<?php echo $id ?>" method="post">
+        <form class="m-3 md:w-2/3 lg:w-1/3" action="sources/db/update.php?id=<?php echo $id ?>" method="post">
             <div class="w-full px-3 mb-4">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="userid">
                     Id
