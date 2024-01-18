@@ -1,4 +1,4 @@
-<div id="login_success_alert" class="rounded-md bg-green-50 p-4 absolute top-0 right-0 m-4 translate-x-[150%] transform transition ease-in-out duration-500">
+<div id="login_success_alert" class="rounded-md bg-green-50 p-4 absolute top-0 left-1/2 -translate-x-[50%] -translate-y-[150%] m-4  transform transition ease-in-out duration-500">
     <div class="flex">
         <div class="flex-shrink-0">
             <svg class="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -24,14 +24,14 @@
 </div>
 <script>
     function showLoginSuccessAlert() {
-        document.getElementById('login_success_alert').classList.remove('translate-x-[150%]');
+        document.getElementById('login_success_alert').classList.remove('-translate-y-[150%]');
         setTimeout(() => {
-            document.getElementById('login_success_alert').classList.add('translate-x-[150%]');
+            document.getElementById('login_success_alert').classList.add('-translate-y-[150%]');
         }, 3000);
     }
     function hideLoginSuccessAlert() {
-        if (document.getElementById('login_success_alert').classList.contains('translate-x-[150%]')) return;
-        document.getElementById('login_success_alert').classList.add('translate-x-[150%]');
+        if (document.getElementById('login_success_alert').classList.contains('-translate-y-[150%]')) return;
+        document.getElementById('login_success_alert').classList.add('-translate-y-[150%]');
     }
     document.getElementById('close_login_success').addEventListener('click', hideLoginSuccessAlert);
     // if ?login=success
@@ -40,7 +40,7 @@
     }
 </script>
 
-<div id="login_failed_alert" class="rounded-md bg-red-50 p-4 absolute top-0 right-0 m-4 translate-x-[150%] transform transition ease-in-out duration-500">
+<div id="login_failed_alert" class="rounded-md bg-red-50 p-4 absolute top-0 left-1/2 -translate-x-[50%] m-4 -translate-y-[150%] transform transition ease-in-out duration-500">
     <div class="flex">
         <div class="flex-shrink-0">
             <svg class="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -56,14 +56,14 @@
 </div>
 <script>
     function showLoginFailedAlert() {
-        document.getElementById('login_failed_alert').classList.remove('translate-x-[150%]');
+        document.getElementById('login_failed_alert').classList.remove('-translate-y-[150%]');
         setTimeout(() => {
-            document.getElementById('login_failed_alert').classList.add('translate-x-[150%]');
+            document.getElementById('login_failed_alert').classList.add('-translate-y-[150%]');
         }, 3000);
     }
     function hideLoginFailedAlert() {
-        if (document.getElementById('login_failed_alert').classList.contains('translate-x-[150%]')) return;
-        document.getElementById('login_failed_alert').classList.add('translate-x-[150%]');
+        if (document.getElementById('login_failed_alert').classList.contains('-translate-y-[150%]')) return;
+        document.getElementById('login_failed_alert').classList.add('-translate-y-[150%]');
     }
     // if ?login=failed
     if (window.location.search.includes('login=failed')) {
@@ -71,7 +71,7 @@
     }
 </script>
 
-<div id="register_success_alert" class="rounded-md bg-green-50 p-4 absolute top-0 right-0 m-4 translate-x-[150%] transform transition ease-in-out duration-500">
+<div id="register_success_alert" class="rounded-md bg-green-50 p-4 absolute top-0 left-1/2 -translate-x-[50%] m-4 -translate-y-[150%] transform transition ease-in-out duration-500">
     <div class="flex">
         <div class="flex-shrink-0">
             <svg class="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -97,14 +97,14 @@
 </div>
 <script>
     function showRegisterSuccessAlert() {
-        document.getElementById('register_success_alert').classList.remove('translate-x-[150%]');
+        document.getElementById('register_success_alert').classList.remove('-translate-y-[150%]');
         setTimeout(() => {
-            document.getElementById('register_success_alert').classList.add('translate-x-[150%]');
+            document.getElementById('register_success_alert').classList.add('-translate-y-[150%]');
         }, 3000);
     }
     function hideRegisterSuccessAlert() {
-        if (document.getElementById('register_success_alert').classList.contains('translate-x-[150%]')) return;
-        document.getElementById('register_success_alert').classList.add('translate-x-[150%]');
+        if (document.getElementById('register_success_alert').classList.contains('-translate-y-[150%]')) return;
+        document.getElementById('register_success_alert').classList.add('-translate-y-[150%]');
     }
     document.getElementById('register_success_alert').addEventListener('click', hideRegisterSuccessAlert);
     // if ?login=success
@@ -113,7 +113,7 @@
     }
 </script>
 
-<div id="register_failed_alert" class="rounded-md bg-red-50 p-4 absolute top-0 right-0 m-4 translate-x-[150%] transform transition ease-in-out duration-500">
+<div id="register_failed_alert" class="rounded-md bg-red-50 p-4 absolute top-0 left-1/2 -translate-x-[50%] m-4 -translate-y-[150%] transform transition ease-in-out duration-500">
     <div class="flex">
         <div class="flex-shrink-0">
             <svg class="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -129,14 +129,14 @@
 </div>
 <script>
     function showRegisterFailedAlert() {
-        document.getElementById('register_failed_alert').classList.remove('translate-x-[150%]');
+        document.getElementById('register_failed_alert').classList.remove('-translate-y-[150%]');
         setTimeout(() => {
-            document.getElementById('register_failed_alert').classList.add('translate-x-[150%]');
+            document.getElementById('register_failed_alert').classList.add('-translate-y-[150%]');
         }, 3000);
     }
     function hideRegisterFailedAlert() {
-        if (document.getElementById('register_failed_alert').classList.contains('translate-x-[150%]')) return;
-        document.getElementById('register_failed_alert').classList.add('translate-x-[150%]');
+        if (document.getElementById('register_failed_alert').classList.contains('-translate-y-[150%]')) return;
+        document.getElementById('register_failed_alert').classList.add('-translate-y-[150%]');
     }
     // if ?login=failed
     if (window.location.search.includes('register=failed')) {
@@ -144,7 +144,7 @@
     }
 </script>
 
-<div id="add_spool_success_alert" class="rounded-md bg-green-50 p-4 absolute top-0 right-0 m-4 translate-x-[150%] transform transition ease-in-out duration-500">
+<div id="add_spool_success_alert" class="rounded-md bg-green-50 p-4 absolute top-0 left-1/2 -translate-x-[50%] m-4 -translate-y-[150%] transform transition ease-in-out duration-500">
     <div class="flex">
         <div class="flex-shrink-0">
             <svg class="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -170,14 +170,14 @@
 </div>
 <script>
     function showAddSpoolSuccessAlert() {
-        document.getElementById('add_spool_success_alert').classList.remove('translate-x-[150%]');
+        document.getElementById('add_spool_success_alert').classList.remove('-translate-y-[150%]');
         setTimeout(() => {
-            document.getElementById('add_spool_success_alert').classList.add('translate-x-[150%]');
+            document.getElementById('add_spool_success_alert').classList.add('-translate-y-[150%]');
         }, 3000);
     }
     function hideAddSpoolSuccessAlert() {
-        if (document.getElementById('add_spool_success_alert').classList.contains('translate-x-[150%]')) return;
-        document.getElementById('add_spool_success_alert').classList.add('translate-x-[150%]');
+        if (document.getElementById('add_spool_success_alert').classList.contains('-translate-y-[150%]')) return;
+        document.getElementById('add_spool_success_alert').classList.add('-translate-y-[150%]');
     }
     document.getElementById('close_add_spool_success').addEventListener('click', hideAddSpoolSuccessAlert);
     // if ?login=success
@@ -186,7 +186,7 @@
     }
 </script>
 
-<div id="add_spool_failed_alert" class="rounded-md bg-red-50 p-4 absolute top-0 right-0 m-4 translate-x-[150%] transform transition ease-in-out duration-500">
+<div id="add_spool_failed_alert" class="rounded-md bg-red-50 p-4 absolute top-0 left-1/2 -translate-x-[50%] m-4 -translate-y-[150%] transform transition ease-in-out duration-500">
     <div class="flex">
         <div class="flex-shrink-0">
             <svg class="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -221,14 +221,14 @@
 </div>
 <script>
     function showAddSpoolFailedAlert() {
-        document.getElementById('add_spool_failed_alert').classList.remove('translate-x-[150%]');
+        document.getElementById('add_spool_failed_alert').classList.remove('-translate-y-[150%]');
         setTimeout(() => {
-            document.getElementById('add_spool_failed_alert').classList.add('translate-x-[150%]');
+            document.getElementById('add_spool_failed_alert').classList.add('-translate-y-[150%]');
         }, 3000);
     }
     function hideAddSpoolFailedAlert() {
-        if (document.getElementById('add_spool_failed_alert').classList.contains('translate-x-[150%]')) return;
-        document.getElementById('add_spool_failed_alert').classList.add('translate-x-[150%]');
+        if (document.getElementById('add_spool_failed_alert').classList.contains('-translate-y-[150%]')) return;
+        document.getElementById('add_spool_failed_alert').classList.add('-translate-y-[150%]');
     }
     // if ?login=failed
     if (window.location.search.includes('add_spool=failed')) {
@@ -236,7 +236,7 @@
     }
 </script>
 
-<div id="delete_spool_success_alert" class="rounded-md bg-green-50 p-4 absolute top-0 right-0 m-4 translate-x-[150%] transform transition ease-in-out duration-500">
+<div id="delete_spool_success_alert" class="rounded-md bg-green-50 p-4 absolute top-0 left-1/2 -translate-x-[50%] m-4 -translate-y-[150%] transform transition ease-in-out duration-500">
     <div class="flex">
         <div class="flex-shrink-0">
             <svg class="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -262,14 +262,14 @@
 </div>
 <script>
     function showDeleteSpoolSuccessAlert() {
-        document.getElementById('delete_spool_success_alert').classList.remove('translate-x-[150%]');
+        document.getElementById('delete_spool_success_alert').classList.remove('-translate-y-[150%]');
         setTimeout(() => {
-            document.getElementById('delete_spool_success_alert').classList.add('translate-x-[150%]');
+            document.getElementById('delete_spool_success_alert').classList.add('-translate-y-[150%]');
         }, 3000);
     }
     function hideDeleteSpoolSuccessAlert() {
-        if (document.getElementById('delete_spool_success_alert').classList.contains('translate-x-[150%]')) return;
-        document.getElementById('delete_spool_success_alert').classList.add('translate-x-[150%]');
+        if (document.getElementById('delete_spool_success_alert').classList.contains('-translate-y-[150%]')) return;
+        document.getElementById('delete_spool_success_alert').classList.add('-translate-y-[150%]');
     }
     document.getElementById('close_delete_spool_success').addEventListener('click', hideDeleteSpoolSuccessAlert);
     // if ?login=success
@@ -278,7 +278,7 @@
     }
 </script>
 
-<div id="delete_spool_failed_alert" class="rounded-md bg-red-50 p-4 absolute top-0 right-0 m-4 translate-x-[150%] transform transition ease-in-out duration-500">
+<div id="delete_spool_failed_alert" class="rounded-md bg-red-50 p-4 absolute top-0 left-1/2 -translate-x-[50%] m-4 -translate-y-[150%] transform transition ease-in-out duration-500">
     <div class="flex">
         <div class="flex-shrink-0">
             <svg class="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -294,14 +294,14 @@
 </div>
 <script>
     function showDeleteSpoolFailedAlert() {
-        document.getElementById('delete_spool_failed_alert').classList.remove('translate-x-[150%]');
+        document.getElementById('delete_spool_failed_alert').classList.remove('-translate-y-[150%]');
         setTimeout(() => {
-            document.getElementById('delete_spool_failed_alert').classList.add('translate-x-[150%]');
+            document.getElementById('delete_spool_failed_alert').classList.add('-translate-y-[150%]');
         }, 3000);
     }
     function hideDeleteSpoolFailedAlert() {
-        if (document.getElementById('delete_spool_failed_alert').classList.contains('translate-x-[150%]')) return;
-        document.getElementById('delete_spool_failed_alert').classList.add('translate-x-[150%]');
+        if (document.getElementById('delete_spool_failed_alert').classList.contains('-translate-y-[150%]')) return;
+        document.getElementById('delete_spool_failed_alert').classList.add('-translate-y-[150%]');
     }
     // if ?login=failed
     if (window.location.search.includes('delete_spool=failed')) {
@@ -309,7 +309,7 @@
     }
 </script>
 
-<div id="logout_success" class="rounded-md bg-green-50 p-4 absolute top-0 right-0 m-4 translate-x-[150%] transform transition ease-in-out duration-500">
+<div id="logout_success" class="rounded-md bg-green-50 p-4 absolute top-0 left-1/2 -translate-x-[50%] m-4 -translate-y-[150%] transform transition ease-in-out duration-500">
     <div class="flex">
         <div class="flex-shrink-0">
             <svg class="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -335,14 +335,14 @@
 </div>
 <script>
     function showLogoutSuccessAlert() {
-        document.getElementById('logout_success').classList.remove('translate-x-[150%]');
+        document.getElementById('logout_success').classList.remove('-translate-y-[150%]');
         setTimeout(() => {
-            document.getElementById('logout_success').classList.add('translate-x-[150%]');
+            document.getElementById('logout_success').classList.add('-translate-y-[150%]');
         }, 3000);
     }
     function hideLogoutSuccessAlert() {
-        if (document.getElementById('logout_success').classList.contains('translate-x-[150%]')) return;
-        document.getElementById('logout_success').classList.add('translate-x-[150%]');
+        if (document.getElementById('logout_success').classList.contains('-translate-y-[150%]')) return;
+        document.getElementById('logout_success').classList.add('-translate-y-[150%]');
     }
     document.getElementById('close_logout_success').addEventListener('click', hideLogoutSuccessAlert);
     // if ?login=success
