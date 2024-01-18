@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +30,6 @@
 </head>
 <?php include './sources/templates/alerts.php'; ?>
 <?php
-session_start();
 if(isset($_SESSION['user_id'])){
     header("Location: index.php");
 }
