@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact Book System</title>
+    <title>Lowcaltech ERP</title>
+    <!--  icon  -->
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <script type="module">
         import { minidenticonSvg } from 'https://cdn.jsdelivr.net/npm/minidenticons@4.2.0/minidenticons.min.js'
     </script>
