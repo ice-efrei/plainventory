@@ -34,7 +34,7 @@ if(isset($_SESSION['user_id'])){
     header("Location: index.php");
 }
 ?>
-<body class="h-screen w-screen overflow-hidden font-extralight flex flex-col justify-center items-center bg-gray-900">
+<body class="min-h-[100vh] w-screen overflow-hidden font-extralight flex flex-col justify-center items-center bg-gray-900">
     <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
         <svg class="mx-auto h-14 w-14" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
