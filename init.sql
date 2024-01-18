@@ -1,6 +1,6 @@
-# CREATE USER 'ice'@'localhost' IDENTIFIED BY 'ice';
-# GRANT CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT, REFERENCES, RELOAD on *.* TO 'ice'@'localhost' WITH GRANT OPTION;
-# # RENAME USER 'ice'@'localhost' TO 'ice'@'172.22.0.2';
+CREATE USER 'ice'@'localhost' IDENTIFIED BY 'ice';
+GRANT CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT, REFERENCES, RELOAD on *.* TO 'ice'@'localhost' WITH GRANT OPTION;
+RENAME USER 'ice'@'localhost' TO 'ice'@'10.5.0.%';
 create database if not exists plainventory;
 use plainventory;
 CREATE TABLE Spools (
