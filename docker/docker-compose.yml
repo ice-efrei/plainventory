@@ -4,16 +4,16 @@ services:
   erp_db:
     image: mysql
     container_name: erp_db
-    command: --init-file /data/application/init.sql
+#    command: --init-file /data/application/init.sql
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_USER: ice
-      MYSQL_PASSWORD: ice
+#      MYSQL_USER: ice
+#      MYSQL_PASSWORD: ice
       MYSQL_DATABASE: plainventory
     ports:
       - "6033:3306"
     volumes:
-      - ../mysql/init.sql:/data/application/init.sql
+      - ../mysql/init.sql:/docker-entrypoint-initdb.d/setup.sql
       - dbdata:/var/lib/mysql
     networks:
       vpcbr:
