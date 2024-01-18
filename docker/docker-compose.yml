@@ -12,12 +12,12 @@ services:
     ports:
       - "6033:3306"
     volumes:
-      - ./init.sql:/data/application/init.sql
+      - ../mysql/init.sql:/data/application/init.sql
       - dbdata:/var/lib/mysql
     networks:
       vpcbr:
         ipv4_address: 10.2.0.36
-  adminer:
+  erp_adminer:
     image: adminer
     restart: always
     ports:
@@ -28,16 +28,24 @@ services:
       vpcbr:
         ipv4_address: 10.2.0.88
   # add an apache server with the php application in the current folder
-  apache:
-    image: php:7.2-apache
+  erp_apache:
+    build: './apachephpmysql'
     restart: always
     ports:
       - 80:80
     volumes:
-      - .:/var/www/html
+      - ../weberp:/var/www/html
     networks:
       vpcbr:
         ipv4_address: 10.2.0.80
 
 volumes:
   dbdata:
+
+networks:
+  vpcbr:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.2.0.0/16
+          gateway: 10.2.0.1

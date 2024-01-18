@@ -52,7 +52,7 @@ if(isset($_SESSION['user_id'])){
     </div>
 
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <form class="space-y-6" action="./user/login.php" method="POST">
+        <form class="space-y-6" action="user/login.php" method="POST">
             <div>
                 <label for="username" class="block text-sm font-medium leading-6 text-white">Username</label>
                 <div class="mt-2">
@@ -79,7 +79,7 @@ if(isset($_SESSION['user_id'])){
 
         <p class="mt-10 text-center text-sm text-gray-400">
             Not a member?
-            <a href="./register.php" class="font-semibold leading-6 text-indigo-400 hover:text-indigo-300">Register Here</a>
+            <a href="register.php" class="font-semibold leading-6 text-indigo-400 hover:text-indigo-300">Register Here</a>
         </p>
     </div>
 </div>

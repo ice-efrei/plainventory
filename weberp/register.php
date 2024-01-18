@@ -29,7 +29,7 @@ if(isset($_SESSION['user_id'])){
         </div>
 
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-md">
-            <form class="space-y-6" action="./user/register.php" method="POST">
+            <form class="space-y-6" action="user/register.php" method="POST">
                 <div>
                     <label for="username" class="block text-sm font-medium leading-6 text-white">Username</label>
                     <div class="mt-2">
@@ -73,7 +73,7 @@ if(isset($_SESSION['user_id'])){
 
             <p class="mt-10 text-center text-sm text-gray-400">
                 Already a user ?
-                <a href="./index.php" class="font-semibold leading-6 text-indigo-400 hover:text-indigo-300">login Here</a>
+                <a href="index.php" class="font-semibold leading-6 text-indigo-400 hover:text-indigo-300">login Here</a>
             </p>
         </div>
     </div>

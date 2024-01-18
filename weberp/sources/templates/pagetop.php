@@ -13,12 +13,14 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    // block height h-144
                     height: {
                         'block': '36rem',
                     },
                 }
-            }
+            },
+            plugins: [
+                require('@tailwindcss/forms'),
+            ],
         }
     </script>
     <style>
