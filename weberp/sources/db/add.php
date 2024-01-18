@@ -43,7 +43,7 @@ if ($errors != "") {
 
 include './conn.php';
 
-$sql = "INSERT INTO Spools (material, color, owner, weight, printer, brand) VALUES ('$material', '$color', '$owner', $weight, '$printer', '$brand')";
+$sql = "INSERT INTO spools (material, color, owner, weight, printer, brand) VALUES ('$material', '$color', '$owner', $weight, '$printer', '$brand')";
 mysqli_query($conn, $sql);
 
 if (mysqli_affected_rows($conn) > 0) {

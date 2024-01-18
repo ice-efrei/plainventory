@@ -3,7 +3,7 @@ $spoolid = intval($_GET['spoolid']);
 
 include './conn.php';
 
-$sql = "DELETE FROM Spools WHERE spoolid = $spoolid";
+$sql = "DELETE FROM spools WHERE spoolid = $spoolid";
 mysqli_query($conn, $sql);
 
 // todo: new alerts

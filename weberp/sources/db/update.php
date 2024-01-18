@@ -20,7 +20,7 @@ $qt = intval($_POST['qt']);
 
 include './conn.php';
 
-$sql = "UPDATE Spools SET material = '$material', color = '$color', owner = '$owner', qt = $qt WHERE spoolid = $spoolid";
+$sql = "UPDATE spools SET material = '$material', color = '$color', owner = '$owner', qt = $qt WHERE spoolid = $spoolid";
 mysqli_query($conn, $sql);
 
 // todo: new alerts
