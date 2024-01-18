@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("10.2.0.36", "ice", "ice", "plainventory", 6033);
+$conn = mysqli_connect("10.2.0.36", "ice", "ice", "plainventory", 3306);
 if (mysqli_connect_errno()) {
     $conn = mysqli_connect("localhost", "root", "root", "plainventory", 3306);
     if (mysqli_connect_errno()) {
