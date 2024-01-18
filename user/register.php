@@ -14,15 +14,15 @@ if ($password != $password2) {
     $resultCheck = mysqli_num_rows($result);
 
     if ($resultCheck > 0) {
-        die('<script>alert("username already used.");window.history.go(-1);</script>');
+        die('<script>windows.location.href="../index.php?register=failed";</script>');
     } else {
         $sql = "insert into users (username, password, email, role, lastLogin) values ('$username', '".md5($password)."', '$email', 'user', '".date('Y-m-d')."')";
         mysqli_query($conn, $sql);
         if (mysqli_affected_rows($conn) > 0) {
-            echo('<script>alert("successfully register");</script>');
-            header("Location: ../index.php");
+//            echo('<script>alert("successfully register");</script>');
+            header("Location: ../index.php?register=success");
         } else {
-            die('<script>alert("Failed to register.");window.history.go(-1);</script>');
+            die('<script>windows.location.href="../index.php?register=failed";</script>');
         }
     }
 }

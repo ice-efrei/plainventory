@@ -19,11 +19,11 @@ if ($row=mysqli_fetch_array($result)) {
     $sql = "UPDATE users SET lastLogin = '".date("Y-m-d")."' WHERE id = ".$row['id'];
     mysqli_query($conn, $sql);
 
-    if($row['role'] == 'admin'){
-        echo('<script>alert("successfully logged as administrator");</script>');
-    }else{
-        echo('<script>alert("successfully login");</script>');
-    }
-    header("Location: ../index.php");
+//    if($row['role'] == 'admin'){
+//        echo('<script>alert("successfully logged as administrator");</script>');
+//    }else{
+//        echo('<script>alert("successfully login");</script>');
+//    }
+    header("Location: ../index.php?login=success");
 }
-die('<script>alert("Failed to login.");location.href="../index.php";</script>');
+die('<script>location.href="../index.php?login=success";</script>');

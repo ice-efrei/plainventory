@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact Book System</title>
+    <script type="module">
+        import { minidenticonSvg } from 'https://cdn.jsdelivr.net/npm/minidenticons@4.2.0/minidenticons.min.js'
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -40,6 +43,7 @@
     </style>
 </head>
 <?php include './sources/templates/userredirect.php'; ?>
-<body class="h-screen w-screen  font-extralight flex flex-col justify-center items-center bg-gray-400">
+<body class="w-screen font-extralight flex flex-col justify-center items-center bg-gray-400">
+    <?php include './sources/templates/alerts.php'; ?>
     <div class="min-h-full w-full bg-gray-400">
         <?php include "./sources/templates/navbar.php"; ?>
