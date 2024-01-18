@@ -1,9 +1,9 @@
+<?php include './sources/templates/userredirect.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Lowcaltech ERP</title>
-    <!--  icon  -->
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <script type="module">
         import { minidenticonSvg } from 'https://cdn.jsdelivr.net/npm/minidenticons@4.2.0/minidenticons.min.js'
@@ -46,7 +46,6 @@
         }
     </style>
 </head>
-<?php include './sources/templates/userredirect.php'; ?>
 <body class="w-screen font-extralight flex flex-col justify-center items-center bg-gray-400">
     <?php include './sources/templates/alerts.php'; ?>
     <div class="min-h-full w-full bg-gray-400">
