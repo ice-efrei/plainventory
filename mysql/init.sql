@@ -1,7 +1,8 @@
+create database if not exists plainventory;
 CREATE USER 'ice'@'localhost' IDENTIFIED BY 'ice';
 RENAME USER 'ice'@'localhost' TO 'ice'@'10.5.0.%';
-GRANT CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT, REFERENCES, RELOAD on *.* TO 'ice'@'10.5.0.%' WITH GRANT OPTION;
-create database if not exists plainventory;
+# CRUD access to the plainventory database
+GRANT SELECT, INSERT, UPDATE, DELETE ON plainventory.* TO 'ice'@'10.5.0.%';
 use plainventory;
 create table if not exists spools (
     spoolid int NOT NULL AUTO_INCREMENT,
