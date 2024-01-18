@@ -9,6 +9,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: ice
       MYSQL_PASSWORD: ice
+      MYSQL_DATABASE: plainventory
     ports:
       - "6033:3306"
     volumes:

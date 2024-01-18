@@ -1,9 +1,9 @@
 CREATE USER 'ice'@'localhost' IDENTIFIED BY 'ice';
-GRANT CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT, REFERENCES, RELOAD on *.* TO 'ice'@'localhost' WITH GRANT OPTION;
 RENAME USER 'ice'@'localhost' TO 'ice'@'10.5.0.%';
+GRANT CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT, REFERENCES, RELOAD on *.* TO 'ice'@'10.5.0.%' WITH GRANT OPTION;
 create database if not exists plainventory;
 use plainventory;
-CREATE TABLE Spools (
+create table if not exists spools (
     spoolid int NOT NULL AUTO_INCREMENT,
     material varchar(255) NOT NULL,
     color varchar(255) NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE Spools (
     brand varchar(255),
     PRIMARY KEY (spoolid)
 );
-CREATE TABLE users (
+create table if not exists users (
     id int NOT NULL AUTO_INCREMENT,
     username varchar(255) DEFAULT NULL,
     password varchar(255) DEFAULT NULL,
