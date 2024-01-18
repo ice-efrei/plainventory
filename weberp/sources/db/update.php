@@ -23,6 +23,8 @@ include './conn.php';
 $sql = "UPDATE Spools SET material = '$material', color = '$color', owner = '$owner', qt = $qt WHERE spoolid = $spoolid";
 mysqli_query($conn, $sql);
 
+// todo: new alerts
+
 if (mysqli_affected_rows($conn) > 0) {
     echo('<script>alert("Successfully updated data");location.href="../../index.php";</script>');
 } else {

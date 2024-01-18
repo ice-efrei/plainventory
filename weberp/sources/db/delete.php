@@ -6,6 +6,8 @@ include './conn.php';
 $sql = "DELETE FROM Spools WHERE spoolid = $spoolid";
 mysqli_query($conn, $sql);
 
+// todo: new alerts
+
 if (mysqli_affected_rows($conn) > 0) {
     echo('<script>alert("Successfully deleted data");location.href="../../index.php";</script>');
 } else {
