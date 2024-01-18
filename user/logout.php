@@ -1,4 +1,4 @@
 <?php
 session_start();
 session_destroy();
-header("Location: ./login.php?logout=success");
+header("Location: ../login.php?logout=success");

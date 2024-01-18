@@ -5,9 +5,10 @@ $username = mysqli_real_escape_string($conn, $_POST['username']);
 $password = mysqli_real_escape_string($conn, $_POST['password']);
 $password2 = mysqli_real_escape_string($conn, $_POST['password_confirm']);
 $email = mysqli_real_escape_string($conn, $_POST['email']);
+$association = mysqli_real_escape_string($conn, $_POST['association']);
 
 if ($password != $password2) {
-    die('<script>alert("Password and confirmed password not same.");window.history.go(-1);</script>');
+    die('<script>windows.location.href="../register.php?register=failed";</script>');
 } else {
     $sql = "select * from users where username='$username'";
     $result = mysqli_query($conn, $sql);
@@ -16,13 +17,13 @@ if ($password != $password2) {
     if ($resultCheck > 0) {
         die('<script>windows.location.href="../index.php?register=failed";</script>');
     } else {
-        $sql = "insert into users (username, password, email, role, lastLogin) values ('$username', '".md5($password)."', '$email', 'user', '".date('Y-m-d')."')";
+        $sql = "insert into users (username, password, email, role, association) values ('$username', '" . md5($password) . "', '$email', 'user', '$association')";
         mysqli_query($conn, $sql);
         if (mysqli_affected_rows($conn) > 0) {
 //            echo('<script>alert("successfully register");</script>');
-            header("Location: ../index.php?register=success");
+            header("Location: ../login.php?register=success");
         } else {
-            die('<script>windows.location.href="../index.php?register=failed";</script>');
+            die('<script>windows.location.href="../register.php?register=failed";</script>');
         }
     }
 }

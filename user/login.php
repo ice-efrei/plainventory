@@ -26,4 +26,4 @@ if ($row=mysqli_fetch_array($result)) {
 //    }
     header("Location: ../index.php?login=success");
 }
-die('<script>location.href="../index.php?login=success";</script>');
+die('<script>location.href="../login.php?login=failed";</script>');

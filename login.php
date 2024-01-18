@@ -27,6 +27,7 @@
         }
     </style>
 </head>
+<?php include './sources/templates/alerts.php'; ?>
 <?php
 session_start();
 if(isset($_SESSION['user_id'])){
