@@ -69,7 +69,7 @@ var app;
         // Get form inputs and compute QR Code
         const ecl = getInputErrorCorrectionLevel();
         const text = getElem("text-input").value;
-        const segs = qrcodegen.QrSegment.makeSegments(text);
+        const segs = qrcodegen.QrSegment.makeSegments(text); // TODO : Modifier ICI
         const minVer = parseInt(getInput("version-min-input").value, 10);
         const maxVer = parseInt(getInput("version-max-input").value, 10);
         const mask = parseInt(getInput("mask-input").value, 10);

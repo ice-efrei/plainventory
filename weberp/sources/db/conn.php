@@ -1,11 +1,5 @@
 <?php
-$conn = mysqli_connect("10.2.0.36", "ice", "ice", "plainventory", 3306);
-if (mysqli_connect_errno()) {
-    $conn = mysqli_connect("localhost", "root", "root", "plainventory", 3306);
-    if (mysqli_connect_errno()) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-}
+$conn = mysqli_connect("192.168.149.182", "root", "root", "plainventory", 6033);
 if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+    die("Connection 1 failed: " . mysqli_connect_error());
 }

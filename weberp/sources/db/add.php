@@ -38,7 +38,7 @@ if (preg_match('/^[a-zA-Z\s]{1,100}$/', $_POST['brand']) || $_POST['brand'] == '
 }
 
 if ($errors != "") {
-    die('<script>location.href="../../index.php?add_spool=failed&errors=' . $errors . '";</script>');
+    die('<script>location.href="../../spools.php?add_spool=failed&errors=' . $errors . '";</script>');
 }
 
 include './conn.php';
@@ -47,7 +47,7 @@ $sql = "INSERT INTO spools (material, color, owner, weight, printer, brand) VALU
 mysqli_query($conn, $sql);
 
 if (mysqli_affected_rows($conn) > 0) {
-    echo('<script>location.href="../../index.php?add_spool=success";</script>');
+    echo('<script>location.href="../../spools.php?add_spool=success";</script>');
 } else {
-    die('<script>location.href="../../index.php?add_spool=error";</script>');
+    die('<script>location.href="../../spools.php?add_spool=error";</script>');
 }

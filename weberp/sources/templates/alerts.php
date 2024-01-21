@@ -309,6 +309,37 @@
     }
 </script>
 
+<div id="spool_not_found_error" class="rounded-md bg-red-50 p-4 absolute top-0 left-1/2 -translate-x-[50%] m-4 -translate-y-[150%] transform transition ease-in-out duration-500">
+    <div class="flex">
+        <div class="flex-shrink-0">
+            <svg class="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z" clip-rule="evenodd" />
+            </svg>
+        </div>
+        <div class="ml-3">
+            <h3 class="text-sm font-medium text-red-800">
+                Bobine introuvable
+            </h3>
+        </div>
+    </div>
+</div>
+<script>
+    function showSpoolNotFoundError() {
+        document.getElementById('spool_not_found_error').classList.remove('-translate-y-[150%]');
+        setTimeout(() => {
+            document.getElementById('spool_not_found_error').classList.add('-translate-y-[150%]');
+        }, 3000);
+    }
+    function hideSpoolNotFoundError() {
+        if (document.getElementById('spool_not_found_error').classList.contains('-translate-y-[150%]')) return;
+        document.getElementById('spool_not_found_error').classList.add('-translate-y-[150%]');
+    }
+    // if ?login=failed
+    if (window.location.search.includes('error=spool_not_found')) {
+        showSpoolNotFoundError();
+    }
+</script>
+
 <div id="logout_success" class="rounded-md bg-green-50 p-4 absolute top-0 left-1/2 -translate-x-[50%] m-4 -translate-y-[150%] transform transition ease-in-out duration-500">
     <div class="flex">
         <div class="flex-shrink-0">
